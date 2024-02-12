@@ -1,0 +1,191 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.main {
+	width: 100%;
+	overflow: hidden;
+}
+.main-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 48px;
+	background: linear-gradient(to bottom, #5d5d5d 0%, #ffffff03 100%);
+}
+.main-header .left {
+	display: flex;
+	align-items: center;
+}
+.main-header .left button {
+	width: 45px;
+	height: 45px;
+	border: 1px solid #0000005f;
+	border-radius: 6px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+	justify-content: center;
+}
+.main-header .left button i {
+	font-size: 20px;
+	color: #000;
+}
+.left.right button {
+	background-color: transparent;
+	border: none;
+	margin: 0px;
+}
+.left.right button i {
+	color: #fff;
+}
+.main .herosection {
+	position: relative;
+}
+.main .herosection span {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #00000038;
+}
+.main .herosection .back-img {
+	height: 456px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.herosection .back-img img {
+	width: 100%;
+}
+.herosection .talbina {
+	position: absolute;
+	bottom: 30px;
+	left: calc(50% - 370px);
+	width: 740px;
+	height: 190px;
+	z-index: 1;
+	background-color: #fff;
+	border-radius: 6px;
+	margin: 0 auto;
+}
+.herosection .talbina .upper {
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #dbdada;
+}
+.herosection .talbina .upper .logo img {
+	width: 64px;
+	height: 64px;
+}
+.herosection .talbina .upper .credit-cards h3 {
+	margin: 0px;
+	font-size: 25px;
+	font-weight: 600;
+}
+.herosection .talbina .upper .credit-cards .credit {
+	display: flex;
+	align-items: center;
+	width: 590px;
+	margin-top: 17px;
+}
+.herosection .talbina .upper .credit-cards .credit img {
+	margin-right: 20px;
+	width: 40px;
+	height: 25px;
+	&:last-child {
+		margin-right: 0px;
+	}
+}
+.herosection .talbina .upper .navigation i {
+	color: #3e3e3e;
+	font-size: 20px;
+}
+.herosection .talbina .lower {
+	padding: 16px;
+}
+.herosection .talbina .lower button {
+	width: 100%;
+	padding: 8px;
+	color: #fff;
+	font-size: 23px;
+	border-radius: 4px;
+	border: none;
+	background-color: #1c79e3;
+}
+.nav-section {
+	background-color: #f0f0f0;
+	width: 100%;
+}
+.nav-section .content {
+	max-width: 1711px;
+	margin: 0 auto;
+}
+.nav-section .nav-bar {
+	width: 100%;
+	max-width: 1711px;
+	margin-top: 80px;
+	background-color: #fff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	/* min-width: 1710px; */
+}
+.nav-section .nav-bar .btns {
+	display: flex;
+	align-items: center;
+	width: 1637px;
+}
+.nav-section .nav-bar .icon i {
+	font-size: 30px;
+	color: gray;
+}
+.nav-section .nav-bar .icon {
+	padding: 10px;
+	border-left: 1px solid gray;
+}
+.nav-section .nav-bar button {
+	background-color: #1c79e3;
+	width: 70px;
+	border-radius: 30px;
+	padding: 10px;
+	border: none;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 600;
+}
+
+.header {
+	padding: 10px 16px;
+	background: #555;
+	color: #f1f1f1;
+}
+
+.content {
+	padding: 16px;
+}
+
+.sticky {
+	position: fixed;
+	top: 20px;
+	width: 100%;
+	z-index: 11;
+}
+
+.sticky + .content {
+	padding-top: 102px;
+}
