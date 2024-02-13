@@ -217,3 +217,35 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
+
+let toggleNavStatus = false;
+
+// Open and close nav
+let toggleNav = function() {
+  let getSidebar = document.querySelector("#side");
+
+  if(getSidebar?.classList.contains("active")){
+    getSidebar?.classList.remove("active");
+    return;
+  }
+  getSidebar?.classList.add("active");
+
+
+  
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const popoverBtn = document.getElementById('popoverBtn');
+  const popoverContent = document.getElementById('popoverContent');
+
+  popoverBtn.addEventListener('click', function(event) {
+    popoverContent.style.display = popoverContent.style.display === 'block' ? 'none' : 'block';
+    event.stopPropagation();
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!popoverBtn.contains(event.target)) {
+      popoverContent.style.display = 'none';
+    }
+  });
+});

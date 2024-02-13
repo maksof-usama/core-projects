@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 		rel="stylesheet" />
@@ -85,17 +85,72 @@
 	<script src="https://kit.fontawesome.com/db79f6162d.js" crossorigin="anonymous"></script>
 	<script src="./script.js"></script>
 	<title>Project</title>
+
 </head>
 
 <body>
 	<div class="main">
+		<div class="side-bar-main-div" id="side">
+
+
+			<div class="nav-sidebar">
+				<div class="header">
+					<button onclick="toggleNav()"><i class="fas fa-chevron-left"></i></i></button>
+					<img src="	https://d2bz4cnll657tl.cloudfront.net/uploads/merchants/b6vXjMdrda/1593371524800070203.jpg"
+						alt="">
+					<button><i class="fas fa-times"></i></button>
+
+				</div>
+				<div class="body">
+					<div class="details">
+						<label for=""><i class="far fa-question-circle"></i>Need Help ?</label>
+						<div class="wtsapp">
+							<i class="fab fa-whatsapp"></i>
+							<label for="">Whatsapp</label>
+						</div>
+					</div>
+					<div class="payout">
+						<h3>Enable Quick & Secure Checkouts</h3>
+						<label for=""><i class="far fa-credit-card"></i>Save your cards</label>
+						<label for=""><i class="fas fa-map-marker-alt"></i>Save your addresses</label>
+						<label for=""><i class="fas fa-sync-alt"></i>1-Click Re-order</label>
+						<button>CREATE ACCOUNT</button>
+						<p>Already a customer? <span>Login</span></p>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="google-btn">
+						<label for="">Or Continue with</label>
+						<div class="btns">
+							<button><img src="https://cdn-icons-png.flaticon.com/512/152/152752.png"
+									alt="">Apple</button>
+							<button><img
+									src="https://cdn.iconscout.com/icon/free/png-256/free-google-1772223-1507807.png"
+									alt="">Goolge</button>
+						</div>
+					</div>
+					<div class="insta">
+						<i class="fab fa-instagram"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="overlay" onclick="toggleNav()"></div>
+		</div>
 		<div class="main-header">
 			<div class="left">
-				<button><i class="far fa-user"></i></button>
+				<button onclick="toggleNav()"><i class="far fa-user btn-toggle-nav"></i></button>
 				<button><i class="fas fa-search"></i></button>
 			</div>
 			<div class="left right">
-				<button><i class="fas fa-shopping-bag"></i></button>
+				<button id="popoverBtn"><i class="fas fa-shopping-bag"></i></button>
+				<div class="pop-main">
+					
+					<div class="my-popover" id="popoverContent">
+						Popover content goes here.
+					</div>
+
+				</div>
 			</div>
 		</div>
 		<div class="herosection">
@@ -151,7 +206,7 @@
 						</a>
 					</div>
 					<div class="icon">
-						<i class="fas fa-th-large"></i>
+						<i class="fas fa-th-large" data-toggle="modal" data-target="#categorymodal"></i>
 					</div>
 				</div>
 				<div class="sections-container">
@@ -307,6 +362,9 @@
 	<div class="main-modal modal fade zoom" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
+				<div class="close" data-dismiss="modal">
+					<i class="fas fa-times"></i>
+				</div>
 				<div class="row">
 					<div class="col-md-6">
 						<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -316,22 +374,27 @@
 								<li data-target="#myCarousel" data-slide-to="1"></li>
 								<li data-target="#myCarousel" data-slide-to="2"></li>
 							</ol>
-							
+
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner" role="listbox">
 								<div class="item active">
-									<img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1">
+									<img src="https://d2bz4cnll657tl.cloudfront.net/uploads/merchants_products/b6vXjMdrda/16948909761156359726_400.png?time=1707747991"
+										alt="Slide 1">
 								</div>
-					
+
 								<div class="item">
-									<img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2">
+									<img src="https://d2bz4cnll657tl.cloudfront.net/uploads/merchants_products/b6vXjMdrda/16948909761156359726_400.png?time=1707747991"
+										alt="Slide 1">
+
 								</div>
-								
+
 								<div class="item">
-									<img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3">
+									<img src="https://d2bz4cnll657tl.cloudfront.net/uploads/merchants_products/b6vXjMdrda/16948909761156359726_400.png?time=1707747991"
+										alt="Slide 1">
+
 								</div>
 							</div>
-							
+
 							<!-- Left and right controls -->
 							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -343,11 +406,52 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-6"></div>
+					<div class="col-md-6">
+						<div class="card-details">
+							<h3>NEQSA</h3>
+							<label for="">A basket of barley products </label>
+							<div class="upload">
+								<h3>
+									16.000 KWD
+								</h3>
+								<label for="">Share
+									<i class="fas fa-upload"></i>
+								</label>
+							</div>
+						</div>
+						<div class="qty-main">
+							<div class="add-qty">
+								<span>
+									<i class="fas fa-minus"></i>
+								</span>
+								<label for="">1</label>
+								<span>
+									<i class="fas fa-plus"></i>
+								</span>
+							</div>
+						</div>
+						<div class="add-cart">
+							<label for="">16.000 KWD</label>
+							<label for="">Add to cart</label>
+						</div>
+					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+
+			</div>
+		</div>
+	</div>
+	<div class="category-modal modal fade zoom" id="categorymodal" tabindex="-1" role="dialog" aria-labelledby="categorymodal">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="close" data-dismiss="modal">
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="category">
+					<h3>Categories</h3>
+					<div class="single">
+						<h3></h3>
+						<i class="fas fa-chevron-right"></i>
+					</div>
 				</div>
 			</div>
 		</div>
