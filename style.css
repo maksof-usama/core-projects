@@ -331,27 +331,70 @@ text-align: center;
 	top: 10px;
 	right: 15px;
 }
+.category-modal .close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+.category-modal .modal-content {
+	height: 93vh;
+}
+.category-modal .main-content {
+	height: 93vh;
+
+}
 
 .main-modal .close i {
 	font-size: 20px;
 	color: #000;
 	cursor: pointer;
 }
-.category-modal .category h3{
-	border-bottom:1px solid #c4c4c4;
+.category-modal .category .head h3{
 	margin: 0px;
 	font-size: 24px;
 	font-weight: 500;
+	text-align: center;
 }
-.main-modal .category .single{
+.category-modal .category .head {
 	border-bottom:1px solid #c4c4c4;
-	padding: 10px;
+	padding: 20px;
 }
-.main-modal .category .single h3{
+.category-modal .category .single{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom:1px solid #c4c4c4;
+	padding: 10px 15px;
+	margin: 15px 0px;
+}
+.category-modal .category .single .qty{
+	display: flex;
+	align-items: center;
+}
+.category-modal .category .single h3{
 	margin: 0px;
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 500;
+	color: #000;
+	border: none;
 }
+.category-modal .category .single .qty span{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 25px;
+	height: 25px;
+	background-color: #1c79e3;
+	border-radius: 50%;
+	font-size: 18px;
+	color: #fff;
+	margin-right: 20px;
+}
+.category-modal .category .single i{
+	font-size: 20px;
+	color: #000;
+}
+
 .main-modal .card-details {
 	border-bottom: 1px solid #dadada;
 	margin-bottom: 15px;
